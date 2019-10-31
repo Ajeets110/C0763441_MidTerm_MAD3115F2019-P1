@@ -13,8 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        
     }
-
-
+    
+    @IBOutlet weak var username: UITextField!
+    
+    @IBOutlet weak var passsword: UITextField!
+    
+    
+    @IBAction func login(_ sender: Any) {
+        
+        let unm = username.text
+        let pass = passsword.text
+        
+        
+    }
+    
 }
 
