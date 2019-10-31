@@ -28,7 +28,10 @@ class ViewController: UIViewController {
         let unm = username.text
         let pass = passsword.text
         
-        
+        if unm == "Ajeet" && pass == "1234"
+        {
+            
+        }
     }
     
 }
