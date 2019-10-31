@@ -28,8 +28,11 @@ class ViewController: UIViewController {
         let unm = username.text
         let pass = passsword.text
         
-        if unm == "Ajeet" && pass == "1234"
+        if unm == "Ajeet15" && pass == "1234"
         {
+            performSegue(withIdentifier: "loginSuccess", sender: nil)
+        }
+        else if unm == nil || pass == nil {
             
         }
     }

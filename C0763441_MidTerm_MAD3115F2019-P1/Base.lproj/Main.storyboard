@@ -76,6 +76,7 @@
                     <connections>
                         <outlet property="passsword" destination="Hji-HI-A56" id="kud-s6-jbG"/>
                         <outlet property="username" destination="FHS-cY-xmh" id="H6S-rc-L8Y"/>
+                        <segue destination="AfD-30-iPe" kind="show" identifier="loginSucess" id="60m-5v-2k1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
