@@ -54,6 +54,7 @@
 		9BFC8294236A64FC0097BBF7 /* C0763441_MidTerm_MAD3115F2019-P1 */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC82A7236A69FB0097BBF7 /* New Group */,
 				9BFC8295236A64FC0097BBF7 /* AppDelegate.swift */,
 				9BFC8297236A64FC0097BBF7 /* ViewController.swift */,
 				9BFC8299236A64FC0097BBF7 /* Main.storyboard */,
@@ -62,6 +63,13 @@
 				9BFC82A1236A64FD0097BBF7 /* Info.plist */,
 			);
 			path = "C0763441_MidTerm_MAD3115F2019-P1";
+			sourceTree = "<group>";
+		};
+		9BFC82A7236A69FB0097BBF7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
