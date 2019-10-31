@@ -19,12 +19,6 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-   
-   
-    
-   
     @IBAction func login(_ sender: Any) {
         let userName = username.text!
         if userName.count > 5
@@ -57,6 +51,8 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    
     
 }
 
