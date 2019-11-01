@@ -49,6 +49,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
 
+    @IBAction func addCustomerBtn(_ sender: Any) {
+
+        //performSegue(withIdentifier: "next", sender: nil)
+        let sb1=UIStoryboard(name: "Main", bundle: nil)
+        let NewCustVC=sb1.instantiateViewController(withIdentifier: "NewCustVC") as! AddCustomerViewController
+        navigationController?.pushViewController(NewCustVC, animated: true)
+    }
     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -116,6 +116,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjG-fg-e94">
+                                <rect key="frame" x="20" y="807" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Customer"/>
+                                <connections>
+                                    <action selector="addCustomerBtn:" destination="AfD-30-iPe" eventType="touchUpInside" id="6uS-70-6Tt"/>
+                                    <segue destination="Boh-xz-cz7" kind="show" identifier="next" id="g6y-ta-Rf3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rhq-tl-aWv"/>
@@ -189,7 +199,7 @@
                         <viewLayoutGuide key="safeArea" id="Z4i-Li-leG"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="lOj-Aa-z4U" id="56s-rU-TAw"/>
+                        <outlet property="emailTxt" destination="lOj-Aa-z4U" id="6CS-Md-lHY"/>
                         <outlet property="firstName" destination="RPb-6l-0mu" id="ybS-8F-4Bi"/>
                         <outlet property="lastName" destination="oCl-eL-0GJ" id="lbx-Qj-wNK"/>
                         <segue destination="AfD-30-iPe" kind="show" identifier="registered" id="Pqd-jb-9JC"/>
