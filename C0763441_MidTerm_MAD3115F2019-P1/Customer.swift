@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Customer : IDisplay{
+class Customer{
     
     
     //  Variable declaration
@@ -35,20 +35,20 @@ class Customer : IDisplay{
         self.email = email
     }
     //  override
-    func display() {
-        print("*****************************")
-        print("Customer Id : \(customerId)")
-        print("Full Name : \(fullName)")
-        if billDictionary != nil{
-        for i in billDictionary.values
-        {
-            i.display()
-        }
-        }
-        else {
-            print("user has no bill")
-        }
-    
-    }
+//    func display() {
+//        print("*****************************")
+//        print("Customer Id : \(customerId)")
+//        print("Full Name : \(fullName)")
+//        if billDictionary != nil{
+//        for i in billDictionary.values
+//        {
+//            i.display()
+//        }
+//        }
+//        else {
+//            print("user has no bill")
+//        }
+//
+//    }
 }
 

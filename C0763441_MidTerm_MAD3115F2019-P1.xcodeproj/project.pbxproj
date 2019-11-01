@@ -13,6 +13,7 @@
 		9B435C4C236B7D39008AF2B5 /* Internet Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B435C49236B7D39008AF2B5 /* Internet Bill.swift */; };
 		9B435C4D236B7D39008AF2B5 /* Mobile Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B435C47236B7D39008AF2B5 /* Mobile Bill.swift */; };
 		9B435C4E236B7D39008AF2B5 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B435C45236B7D38008AF2B5 /* IDisplay.swift */; };
+		9B4A1AF4236BAD49003920AE /* CusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A1AF3236BAD49003920AE /* CusTableViewController.swift */; };
 		9BFC8296236A64FC0097BBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC8295236A64FC0097BBF7 /* AppDelegate.swift */; };
 		9BFC8298236A64FC0097BBF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC8297236A64FC0097BBF7 /* ViewController.swift */; };
 		9BFC829B236A64FC0097BBF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC8299236A64FC0097BBF7 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		9B435C47236B7D39008AF2B5 /* Mobile Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mobile Bill.swift"; sourceTree = "<group>"; };
 		9B435C48236B7D39008AF2B5 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9B435C49236B7D39008AF2B5 /* Internet Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Internet Bill.swift"; sourceTree = "<group>"; };
+		9B4A1AF3236BAD49003920AE /* CusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusTableViewController.swift; sourceTree = "<group>"; };
 		9BFC8292236A64FC0097BBF7 /* C0763441_MidTerm_MAD3115F2019-P1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C0763441_MidTerm_MAD3115F2019-P1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFC8295236A64FC0097BBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFC8297236A64FC0097BBF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				9BFC829C236A64FD0097BBF7 /* Assets.xcassets */,
 				9BFC829E236A64FD0097BBF7 /* LaunchScreen.storyboard */,
 				9BFC82A1236A64FD0097BBF7 /* Info.plist */,
+				9B4A1AF3236BAD49003920AE /* CusTableViewController.swift */,
 			);
 			path = "C0763441_MidTerm_MAD3115F2019-P1";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				9BFC8298236A64FC0097BBF7 /* ViewController.swift in Sources */,
 				9BFC8296236A64FC0097BBF7 /* AppDelegate.swift in Sources */,
+				9B4A1AF4236BAD49003920AE /* CusTableViewController.swift in Sources */,
 				9B435C4C236B7D39008AF2B5 /* Internet Bill.swift in Sources */,
 				9B435C4D236B7D39008AF2B5 /* Mobile Bill.swift in Sources */,
 				9B435C4A236B7D39008AF2B5 /* Bill.swift in Sources */,

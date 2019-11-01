@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="18.75"/>
         </scene>
-        <!--Customer Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="u8O-zz-xy2">
             <objects>
-                <viewController id="AfD-30-iPe" customClass="CustomerTableViewController" customModule="C0763441_MidTerm_MAD3115F2019_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AfD-30-iPe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lS-5P-7Hv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
