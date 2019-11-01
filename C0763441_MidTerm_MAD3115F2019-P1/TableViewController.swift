@@ -10,8 +10,15 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
-
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }
@@ -21,9 +28,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -88,6 +93,5 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
 
-}
 
 }
