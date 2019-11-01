@@ -12,12 +12,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var remember: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let defObj = Singleton.getInstance()
         defObj.alreadyCustomer()
+        UserDefaults.standard.string(forKey: "users")
+        UserDefaults.standard.string(forKey: "password")
     }
     
     @IBAction func login(_ sender: Any) {
@@ -26,6 +29,16 @@ class ViewController: UIViewController {
         {
             let pass = password.text!
             let user = username.text!
+            if remember.isOn{
+                
+                UserDefaults.standard.set(user, forKey: "users")
+                UserDefaults.standard.set(pass, forKey: "password")
+                
+            }
+            else{
+                UserDefaults.standard.removeObject(forKey: "users")
+                UserDefaults.standard.removeObject(forKey: "password")
+            }
             if user == "ajeets110@gmail.com"
             {
                 if pass == "1234"
@@ -49,8 +62,11 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ignore", style: .destructive, handler: nil))
             
             self.present(alert, animated: true)
-            
+        
         }
+        
+        
+        
     }
     
     

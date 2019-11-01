@@ -71,6 +71,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="password" destination="Hji-HI-A56" id="kcf-Gs-RLy"/>
+                        <outlet property="remember" destination="CDK-BL-y81" id="NOA-B9-oZn"/>
                         <outlet property="username" destination="FHS-cY-xmh" id="aHI-LI-AfA"/>
                         <segue destination="AfD-30-iPe" kind="show" identifier="loginSucess" id="60m-5v-2k1"/>
                     </connections>
@@ -229,6 +230,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pqd-jb-9JC"/>
+        <segue reference="60m-5v-2k1"/>
     </inferredMetricsTieBreakers>
 </document>
