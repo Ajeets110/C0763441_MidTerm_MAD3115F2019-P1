@@ -124,6 +124,9 @@
                         <barButtonItem title="Item" id="62V-fC-eDl"/>
                     </toolbarItems>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="custTable" destination="4YV-iw-scy" id="6OJ-qw-8Og"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="US3-yZ-ef6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

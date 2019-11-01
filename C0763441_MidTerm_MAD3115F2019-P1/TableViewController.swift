@@ -11,16 +11,22 @@ import UIKit
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var custTable: UITableView!
     
+    
+    var sinObj = Singleton.getInstance()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return sinObj.returnCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -53,7 +53,21 @@ class Singleton: NSObject {
         
     }
     
+    func returnCount() -> Int {
+        return custDict.count
+    }
     
     
+    func returnCustObj(custId:Int)->Customer?
+    {
+        for(key,value) in custDict
+        {
+            if key==custId
+            {
+                return value
+            }
+        }
+        return nil
+    }
     
 }
