@@ -11,7 +11,7 @@ import UIKit
 class Singleton: NSObject {
     
     //created dictionary for customer
-    private var custDict:[Int:Customer]
+    private var custDict = [Int:Customer]()
     
     //private init
     private override init() {
@@ -45,9 +45,9 @@ class Singleton: NSObject {
     }
     
     //funtion to add customer
-    func addCustomer(customerID:Int, firstname:String, lastname:String, email:String)  {
-        
-        var c = Customer(customerID: customerID, firstName: firstname, lastName: lastname, email: email)
+    func addCustomer(firstname:String, lastname:String, email:String)  {
+        let cId = custDict.count+1
+        var c = Customer(customerID: cId, firstName: firstname, lastName: lastname, email: email)
         addCustomerToDictionary(c: c)
         print(c.firstName)
         
@@ -57,7 +57,7 @@ class Singleton: NSObject {
         return custDict.count
     }
     
-    
+    //Return Customer Object 
     func returnCustObj(custId:Int)->Customer?
     {
         for(key,value) in custDict

@@ -20,17 +20,25 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        custTable.dataSource = self
+        custTable.delegate = self
+        sinObj.alreadyCustomer()
         
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sinObj.returnCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let c = sinObj.returnCustObj(custId: Int(indexPath.row+1))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "custCell", for: indexPath)
+        cell.textLabel?.text = c?.fullName
+        return cell
     }
 
 
