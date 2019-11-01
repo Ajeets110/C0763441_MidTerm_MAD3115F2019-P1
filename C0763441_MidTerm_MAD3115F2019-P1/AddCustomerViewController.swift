@@ -29,7 +29,7 @@ class AddCustomerViewController: UIViewController {
         
         temp.addCustomer(firstname: fname, lastname: lname, email: email)
         
-        
+        self.performSegue(withIdentifier: "registered", sender: self)
         
     }
     

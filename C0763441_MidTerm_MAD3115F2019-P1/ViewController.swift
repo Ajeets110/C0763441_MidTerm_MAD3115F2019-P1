@@ -22,11 +22,11 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         let userName = username.text!
-        if userName.count > 5
+        if userName.count > 10
         {
             let pass = password.text!
             let user = username.text!
-            if user == "Ajeet15"
+            if user == "ajeets110@gmail.com"
             {
                 if pass == "1234"
                 {
