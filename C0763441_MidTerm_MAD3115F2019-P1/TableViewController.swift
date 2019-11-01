@@ -41,16 +41,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
 
-    
-    @IBAction func addCustBtn(_ sender: Any) {
+    @IBAction func add(_ sender: UIBarButtonItem) {
         
-        
-        let sb1 = UIStoryboard(name: "Main", bundle: nil)
-        let addCustomerVC = sb1.instantiateViewController(withIdentifier: "NewCust") as! AddCustomerViewController
-        
+        let sb1=UIStoryboard(name: "Main", bundle: nil)
+        let NewCustVC=sb1.instantiateViewController(withIdentifier: "NewCustVC") as! AddCustomerViewController
+        navigationController?.pushViewController(NewCustVC, animated: true)
     }
-    
-    
     
 
     
