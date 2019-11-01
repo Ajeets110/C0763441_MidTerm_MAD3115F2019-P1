@@ -11,7 +11,9 @@ import UIKit
 class AddCustomerViewController: UIViewController {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var emailTxt: UITextField!
+    
+    var temp = Singleton.getInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,12 @@ class AddCustomerViewController: UIViewController {
     }
     
     @IBAction func addCustomerBtn(_ sender: Any) {
+        
+        let fname = firstName.text!
+        let lname = lastName.text!
+        let email = emailTxt.text!
+        
+        temp.addCustomer(firstname: fname, lastname: lname, email: email)
         
         
         

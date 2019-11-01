@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Customer View Controller-->
         <scene sceneID="HEI-Xh-cNi">
             <objects>
-                <viewController id="Boh-xz-cz7" sceneMemberID="viewController">
+                <viewController id="Boh-xz-cz7" customClass="AddCustomerViewController" customModule="C0763441_MidTerm_MAD3115F2019_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulf-AF-Ae5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,11 +177,20 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addCustomerBtn:" destination="Boh-xz-cz7" eventType="touchUpInside" id="pWc-Mg-AyV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z4i-Li-leG"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="lOj-Aa-z4U" id="56s-rU-TAw"/>
+                        <outlet property="firstName" destination="RPb-6l-0mu" id="ybS-8F-4Bi"/>
+                        <outlet property="lastName" destination="oCl-eL-0GJ" id="lbx-Qj-wNK"/>
+                        <segue destination="AfD-30-iPe" kind="show" identifier="registered" id="Pqd-jb-9JC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mef-ur-6Dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,4 +215,7 @@
             <point key="canvasLocation" x="109" y="19"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pqd-jb-9JC"/>
+    </inferredMetricsTieBreakers>
 </document>
