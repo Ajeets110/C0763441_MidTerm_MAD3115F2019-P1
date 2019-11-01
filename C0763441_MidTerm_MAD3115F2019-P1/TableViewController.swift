@@ -1,5 +1,5 @@
 //
-//  CusTableViewController.swift
+//  TableViewController.swift
 //  C0763441_MidTerm_MAD3115F2019-P1
 //
 //  Created by MacStudent on 2019-10-31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CusTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
