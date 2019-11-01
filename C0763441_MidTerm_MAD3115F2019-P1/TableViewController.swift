@@ -45,7 +45,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func addCustBtn(_ sender: Any) {
         
         
-        
+        let sb1 = UIStoryboard(name: "Main", bundle: nil)
+        let addCustomerVC = sb1.instantiateViewController(withIdentifier: "NewCust") as! AddCustomerViewController
         
     }
     

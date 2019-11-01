@@ -115,9 +115,6 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="addCustBtn:" destination="AfD-30-iPe" eventType="touchUpInside" id="Prk-E2-k19"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,7 +136,7 @@
         <!--Add Customer View Controller-->
         <scene sceneID="HEI-Xh-cNi">
             <objects>
-                <viewController id="Boh-xz-cz7" customClass="AddCustomerViewController" customModule="C0763441_MidTerm_MAD3115F2019_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCust" id="Boh-xz-cz7" customClass="AddCustomerViewController" customModule="C0763441_MidTerm_MAD3115F2019_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulf-AF-Ae5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
