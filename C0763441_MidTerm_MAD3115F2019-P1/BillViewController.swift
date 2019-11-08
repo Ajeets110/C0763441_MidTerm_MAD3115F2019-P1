@@ -10,31 +10,22 @@ import UIKit
 
 class BillViewController: UIViewController {
 
-    var sinObj = Singleton.getInstance()
-    
+  
     
     @IBOutlet weak var cust_detail: UILabel!
+    @IBOutlet weak var cust_detail_name: UILabel!
     
-    override func viewDidLoad() {
+    var c : Customer?=nil
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-         
+            
+            //cust_detail.text = c?.customerId
+            cust_detail_name.text = c?.fullName
+            
+            
     }
     
-    var custId: Int
-    var custName: String
-    var custEmail: String
-    
-    init(id: Int, custName: String, email: String) {
-        custId = id
-        self.custName = custName
-        self.custEmail = email
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
 }
 
