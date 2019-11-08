@@ -54,35 +54,41 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if bTemp.elementsEqual("Mobile")
         {
-            let tempObj =  billTemp[indexPath.row] as! MobileBill
+            let tObj =  billTemp[indexPath.row] as! MobileBill
+            cell.billId.text = tObj.billId.intToString()
             cell.billType.text = bTemp
-            cell.BillDate.text = tempObj.billDate
-            //cell.billAmount.text = String(tempObj.billAmount)
+            cell.BillDate.text = tObj.billDate
+           // cell.billAmount.text = tObj.billAmount.fltToString()
         }
-        if bTemp.elementsEqual("Interner")
+        if bTemp.elementsEqual("Internet")
         {
-            let tempObj =  billTemp[indexPath.row] as! InternetBill
+            let tObj =  billTemp[indexPath.row] as! InternetBill
+            cell.billId.text = tObj.billId.intToString()
             cell.billType.text = bTemp
-            cell.BillDate.text = tempObj.billDate
-           // cell.billAmount.text = String(tempObj.billAmount)
+            cell.BillDate.text = tObj.billDate
+           //cell.billAmount.text = String(tObj.billAmount)
         }
         if bTemp.elementsEqual("Hydro")
         {
-            let tempObj =  billTemp[indexPath.row] as! HydroBill
+            let tObj =  billTemp[indexPath.row] as! HydroBill
+            cell.billId.text = tObj.billId.intToString()
             cell.billType.text = bTemp
-            cell.BillDate.text = tempObj.billDate
-           // cell.billAmount.text = String(tempObj.billAmount)
+            cell.BillDate.text = tObj.billDate
+           // cell.billAmount.text = String(tObj.billAmount)
         }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 160
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let billDetails = sb.instantiateViewController(withIdentifier: "billDetails") as! BillDetailsViewController
+        let tempArray = c!.returnBillArray()
+        billDetails.billObj = tempArray[indexPath.row]
+        navigationController?.pushViewController(billDetails, animated: true)
     }
-    
     
 }
 

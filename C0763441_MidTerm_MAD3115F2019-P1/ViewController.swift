@@ -24,20 +24,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        let userName = username.text!
-        if userName.count > 10
+        let pass = password.text!
+        let user = username.text!
+        
+        if user.count > 10
         {
-            let pass = password.text!
-            let user = username.text!
+            
             if remember.isOn{
                 
-                UserDefaults.standard.set(user, forKey: "users")
-                UserDefaults.standard.set(pass, forKey: "password")
+                UserDefaults.standard.set(user, forKey: "user")
+                UserDefaults.standard.set(pass, forKey: "pass")
                 
             }
             else{
-                UserDefaults.standard.removeObject(forKey: "users")
-                UserDefaults.standard.removeObject(forKey: "password")
+                UserDefaults.standard.removeObject(forKey: "user")
+                UserDefaults.standard.removeObject(forKey: "pass")
             }
             if user == "ajeets110@gmail.com"
             {

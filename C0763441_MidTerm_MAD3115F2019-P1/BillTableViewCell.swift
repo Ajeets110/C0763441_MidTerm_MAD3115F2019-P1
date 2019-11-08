@@ -13,6 +13,7 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var billType: UITextField!
     @IBOutlet weak var BillDate: UITextField!
     
+    @IBOutlet weak var billId: UITextField!
     @IBOutlet weak var billAmount: UITextField!
     
     
