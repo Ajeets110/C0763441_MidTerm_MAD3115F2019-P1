@@ -16,7 +16,7 @@ class Bill: IDisplay {
     var billId : Int
     var billDate : String
     //var amount : Float
-    enum bTypes {
+    enum bTypes: String {
         case Internet
         case Mobile
         case Hydro
