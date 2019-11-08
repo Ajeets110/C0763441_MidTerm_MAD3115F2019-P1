@@ -9,9 +9,11 @@
 import UIKit
 
 class BillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    var tempDic:Dictionary<Int,Bill> = [:]
   
-    
+    @IBOutlet weak var billTypeTxt: UITextField!
+    @IBOutlet weak var billType: UILabel!
+    var sinObj = Singleton.getInstance()
     @IBOutlet weak var cust_detail: UILabel!
     @IBOutlet weak var cust_detail_name: UILabel!
     
@@ -20,7 +22,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
         override func viewDidLoad() {
         super.viewDidLoad()
             
-            //cust_detail.text = c?.customerId
+            //cust_detail.text = Int(c?.customerId)
             cust_detail_name.text = c?.fullName
             
             
@@ -35,9 +37,14 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let c = sinObj.returnCustObj(custId: Int(indexPath.row+1))
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell", for: indexPath)
-        cell.textLabel?.text = c?.fullName
+        //tempDic = c!.billDictionary
+        //billType.text = tempDic[indexPath.row, b]
+        var billTemp = c?.returnBillArray()
+        let bTemp = billTemp?[indexPath.row].billType
+        cell.
         return cell
     }
     
