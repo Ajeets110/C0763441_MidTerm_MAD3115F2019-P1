@@ -17,15 +17,15 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var cust_detail: UILabel!
     @IBOutlet weak var cust_detail_name: UILabel!
     
+    @IBOutlet weak var cust_detail_email: UILabel!
     var c : Customer?=nil
     
         override func viewDidLoad() {
         super.viewDidLoad()
             
-            //cust_detail.text = Int(c?.customerId)
+            cust_detail.text = c?.customerId.intToString()
             cust_detail_name.text = c?.fullName
-            
-            
+            cust_detail_email.text = c?.email
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,7 +44,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
         //billType.text = tempDic[indexPath.row, b]
         var billTemp = c?.returnBillArray()
         let bTemp = billTemp?[indexPath.row].billType
-        cell.
+        //cell.
         return cell
     }
     
