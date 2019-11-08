@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B15583B23760DE2000EC0BF /* extensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15583A23760DE2000EC0BF /* extensionInt.swift */; };
 		9B15583D237610A0000EC0BF /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15583C237610A0000EC0BF /* BillTableViewCell.swift */; };
+		9B15583F2376214F000EC0BF /* BillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15583E2376214F000EC0BF /* BillDetailsViewController.swift */; };
 		9B1813F8236CB0CC002DDA90 /* AddCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1813F7236CB0CC002DDA90 /* AddCustomerViewController.swift */; };
 		9B435C38236B7BDF008AF2B5 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B435C2B236B7668008AF2B5 /* Customer.swift */; };
 		9B435C4A236B7D39008AF2B5 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B435C48236B7D39008AF2B5 /* Bill.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		9B15583A23760DE2000EC0BF /* extensionInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionInt.swift; sourceTree = "<group>"; };
 		9B15583C237610A0000EC0BF /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		9B15583E2376214F000EC0BF /* BillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailsViewController.swift; sourceTree = "<group>"; };
 		9B1813F7236CB0CC002DDA90 /* AddCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerViewController.swift; sourceTree = "<group>"; };
 		9B435C2B236B7668008AF2B5 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9B435C45236B7D38008AF2B5 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				9B98A64E2374E60D00136E04 /* BillViewController.swift */,
 				9B15583A23760DE2000EC0BF /* extensionInt.swift */,
 				9B15583C237610A0000EC0BF /* BillTableViewCell.swift */,
+				9B15583E2376214F000EC0BF /* BillDetailsViewController.swift */,
 			);
 			path = "C0763441_MidTerm_MAD3115F2019-P1";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				9B4A1AFA236BB575003920AE /* Singleton.swift in Sources */,
 				9B98A64F2374E60D00136E04 /* BillViewController.swift in Sources */,
 				9B15583B23760DE2000EC0BF /* extensionInt.swift in Sources */,
+				9B15583F2376214F000EC0BF /* BillDetailsViewController.swift in Sources */,
 				9B435C4D236B7D39008AF2B5 /* Mobile Bill.swift in Sources */,
 				9B435C4A236B7D39008AF2B5 /* Bill.swift in Sources */,
 				9B435C4B236B7D39008AF2B5 /* Hydro Bill.swift in Sources */,
