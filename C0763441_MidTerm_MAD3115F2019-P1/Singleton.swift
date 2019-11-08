@@ -11,7 +11,7 @@ import UIKit
 class Singleton: NSObject {
     
     //created dictionary for customer
-    private var custDict = [Int:Customer]()
+     var custDict = [Int:Customer]()
     
     //private init
     private override init() {
@@ -80,7 +80,5 @@ class Singleton: NSObject {
         }
         return nil
     }
-    
-
     
 }

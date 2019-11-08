@@ -58,7 +58,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if #available(iOS 13.0, *) {
+            let c = sinObj.returnCustObj(custId: Int(indexPath.row+1))
+            BillViewController.init(id: c!.customerId, custName: c!.fullName, email: c!.email)
             let vc = (storyboard?.instantiateViewController(identifier: "BillViewController") as? BillViewController)!
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
