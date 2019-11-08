@@ -52,12 +52,12 @@ class Customer{
 //    }
     func returnBillArray() -> Array<Bill>
     {
-        var temp : Array<Bill> = []
+        var t : Array<Bill> = []
         for i in billDictionary.values
         {
-            temp.append(i)
+            t.append(i)
         }
-        return temp
+        return t
     }
 }
 

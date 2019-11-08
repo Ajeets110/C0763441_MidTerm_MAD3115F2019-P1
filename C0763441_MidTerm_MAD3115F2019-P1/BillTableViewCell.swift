@@ -14,7 +14,6 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var BillDate: UITextField!
     
     @IBOutlet weak var billAmount: UITextField!
-    @IBOutlet weak var billTypelbl: UILabel!
     
     
     override func awakeFromNib() {

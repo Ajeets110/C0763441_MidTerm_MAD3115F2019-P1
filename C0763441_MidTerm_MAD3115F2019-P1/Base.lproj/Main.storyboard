@@ -218,13 +218,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-13-4gL">
-                                                    <rect key="frame" x="20" y="46" width="36" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-z5-FU3">
                                                     <rect key="frame" x="20" y="80" width="60" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -251,11 +244,17 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-1z-Eva">
+                                                    <rect key="frame" x="20" y="44" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="BillDate" destination="m7r-7p-tC7" id="Irg-OB-TnE"/>
-                                            <outlet property="billAmount" destination="2jG-7U-bbM" id="4Np-oZ-KPA"/>
                                             <outlet property="billType" destination="jnW-J5-OkX" id="GuQ-jc-NTJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -266,6 +265,7 @@
                         <viewLayoutGuide key="safeArea" id="AWv-JZ-gT5"/>
                     </view>
                     <connections>
+                        <outlet property="billTable" destination="4gZ-vT-Ele" id="c1n-qh-95E"/>
                         <outlet property="cust_detail" destination="1Ch-v8-bV9" id="A0H-33-Wvg"/>
                         <outlet property="cust_detail_email" destination="aE5-Hb-Kjr" id="eSC-HT-RYz"/>
                         <outlet property="cust_detail_name" destination="kFC-sr-wKg" id="sIm-gj-hEQ"/>
