@@ -49,11 +49,12 @@ class BillDetailsViewController: UIViewController {
         txtID.text = billObj?.billId.intToString()
         txttype.text = billObj?.billType.rawValue
         txtDate.text = billObj?.billDate
-        //txtAmount.text = billObj.billAmount
+        
         
         // Dynamic Labels
         
         if billObj!.billType.rawValue == "Mobile"{
+            
             
             label1.isHidden = false
             label1.text = "Manufacturer Name"
@@ -68,6 +69,9 @@ class BillDetailsViewController: UIViewController {
             label4.text = "Internet Used"
             
             let m = billObj as! MobileBill
+            
+            txtAmount.text = m.billAmount.fltToString()
+            
             txt1.isHidden = false
             txt1.text = m.manufacturerName
             
@@ -90,6 +94,9 @@ class BillDetailsViewController: UIViewController {
             label2.text = "Data Used"
             
             let i = billObj as! InternetBill
+            
+            txtAmount.text = i.billAmount.fltToString()
+            
             txt1.isHidden = false
             txt1.text = i.providerName
             
@@ -107,6 +114,9 @@ class BillDetailsViewController: UIViewController {
                    label2.text = "Unit Used"
                    
                    let h = billObj as! HydroBill
+            
+            txtAmount.text = h.billAmount.fltToString()
+            
                    txt1.isHidden = false
             txt1.text = h.agencyName
                    

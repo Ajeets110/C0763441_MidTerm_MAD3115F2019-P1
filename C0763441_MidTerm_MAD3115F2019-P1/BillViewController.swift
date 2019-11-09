@@ -39,7 +39,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sinObj.returnCount()
+        return (c?.billDictionary.count)!
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,7 +58,8 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.billId.text = tObj.billId.intToString()
             cell.billType.text = bTemp
             cell.BillDate.text = tObj.billDate
-           // cell.billAmount.text = tObj.billAmount.fltToString()
+            
+            //cell.billAmount.text = String(tObj.billAmount)
         }
         if bTemp.elementsEqual("Internet")
         {
@@ -66,7 +67,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.billId.text = tObj.billId.intToString()
             cell.billType.text = bTemp
             cell.BillDate.text = tObj.billDate
-           //cell.billAmount.text = String(tObj.billAmount)
+            //cell.billAmount.text = String(tObj.billAmount)
         }
         if bTemp.elementsEqual("Hydro")
         {
@@ -74,7 +75,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.billId.text = tObj.billId.intToString()
             cell.billType.text = bTemp
             cell.BillDate.text = tObj.billDate
-           // cell.billAmount.text = String(tObj.billAmount)
+            //cell.billAmount.text = String(tObj.billAmount)
         }
         return cell
     }
