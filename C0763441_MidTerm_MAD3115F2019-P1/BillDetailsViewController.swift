@@ -46,13 +46,74 @@ class BillDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        txtID.text = billObj?.billId
-        txttype.text = billObj?.billType
-        txtDate.text =
+        txtID.text = billObj?.billId.intToString()
+        txttype.text = billObj?.billType.rawValue
+        txtDate.text = billObj?.billDate
+        //txtAmount.text = billObj.billAmount
         
+        // Dynamic Labels
         
+        if billObj!.billType.rawValue == "Mobile"{
+            
+            label1.isHidden = false
+            label1.text = "Manufacturer Name"
+            
+            label2.isHidden = false
+            label2.text = "Plan Name"
+            
+            label3.isHidden = false
+            label3.text = "Minutes Used"
+            
+            label4.isHidden = false
+            label4.text = "Internet Used"
+            
+            let m = billObj as! MobileBill
+            txt1.isHidden = false
+            txt1.text = m.manufacturerName
+            
+            txt2.isHidden = false
+            txt2.text = m.planName
+            
+            txt3.isHidden = false
+            txt3.text = m.minutesUsed.intToString()
+            
+            txt4.isHidden = false
+            txt4.text = m.internetUsed.fltToString()
+        }
         
+        if billObj!.billType.rawValue == "Internet"{
+            
+            label1.isHidden = false
+            label1.text = "Provider Name"
+            
+            label2.isHidden = false
+            label2.text = "Data Used"
+            
+            let i = billObj as! InternetBill
+            txt1.isHidden = false
+            txt1.text = i.providerName
+            
+            txt2.isHidden = false
+            txt2.text = i.gbUsed.fltToString()
+            
+        }
         
+         if billObj!.billType.rawValue == "Hydro"{
+                   
+                   label1.isHidden = false
+                   label1.text = "Agency Name"
+                   
+                   label2.isHidden = false
+                   label2.text = "Unit Used"
+                   
+                   let h = billObj as! HydroBill
+                   txt1.isHidden = false
+            txt1.text = h.agencyName
+                   
+                   txt2.isHidden = false
+            txt2.text = h.unitConsumed.intToString()
+                   
+               }
     }
     
     
