@@ -91,5 +91,12 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.pushViewController(billDetails, animated: true)
     }
     
+    
+    @IBAction func addBill(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let newBill = sb.instantiateViewController(withIdentifier: "saveBill") as! AddBillViewController
+        navigationController?.pushViewController(newBill, animated: true)
+    }
+    
 }
 

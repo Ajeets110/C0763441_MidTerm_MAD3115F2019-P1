@@ -274,7 +274,11 @@
                                 <items>
                                     <navigationItem title="Bills" id="PnA-ML-jXt">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="Mhg-K4-nTA"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Add Bill" id="mGE-x9-rzG"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Add Bill" id="mGE-x9-rzG">
+                                            <connections>
+                                                <action selector="addBill:" destination="mal-tm-OhN" id="BxV-wJ-b41"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -299,6 +303,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGK-v6-9UY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2656.521739130435" y="16.741071428571427"/>
+        </scene>
+        <!--Add Bill View Controller-->
+        <scene sceneID="P7j-mF-s8Y">
+            <objects>
+                <viewController storyboardIdentifier="saveBill" id="1c4-Ws-HPR" customClass="AddBillViewController" customModule="C0763441_MidTerm_MAD3115F2019_P1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M7h-wQ-fBx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-F3-7Ye">
+                                <rect key="frame" x="98" y="123" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gK-ZQ-cY0">
+                                <rect key="frame" x="98" y="165" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9l-kr-hHz">
+                                <rect key="frame" x="98" y="207" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-OS-hdf">
+                                <rect key="frame" x="98" y="249" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khi-23-RxO">
+                                <rect key="frame" x="1" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Bill" id="mdP-QC-Cnz">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="Lcv-B2-k5o"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="bzR-0D-wZi">
+                                            <connections>
+                                                <action selector="saveBill:" destination="1c4-Ws-HPR" id="3Hn-OO-Oz9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0P-aw-Qe8">
+                                <rect key="frame" x="98" y="315" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-uD-Wwx">
+                                <rect key="frame" x="99" y="357" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-Hh-tQ2">
+                                <rect key="frame" x="99" y="399" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwQ-Il-3GB">
+                                <rect key="frame" x="99" y="441" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HOD-aB-yPJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="bill_Date" destination="l9l-kr-hHz" id="gFL-dK-zwf"/>
+                        <outlet property="bill_ID" destination="cXi-F3-7Ye" id="gGU-DF-4lr"/>
+                        <outlet property="bill_Type" destination="3gK-ZQ-cY0" id="sYn-Mk-rRs"/>
+                        <outlet property="bill_amount" destination="aTA-OS-hdf" id="Sh0-3E-RdM"/>
+                        <outlet property="txt1" destination="I0P-aw-Qe8" id="25Q-6T-RNo"/>
+                        <outlet property="txt2" destination="2Oy-uD-Wwx" id="EMF-pO-o5n"/>
+                        <outlet property="txt3" destination="UQ0-Hh-tQ2" id="ACm-Sv-i0h"/>
+                        <outlet property="txt4" destination="KwQ-Il-3GB" id="BT4-LX-CYb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqd-qL-KT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656.521739130435" y="724.55357142857144"/>
         </scene>
         <!--Bill Details View Controller-->
         <scene sceneID="lUm-ju-DJs">
