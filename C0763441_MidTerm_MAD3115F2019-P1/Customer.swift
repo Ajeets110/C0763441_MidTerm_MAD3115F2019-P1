@@ -38,22 +38,7 @@ class Customer{
     {
         billDictionary.updateValue(Bill, forKey: Bill.billId)
     }
-    //  override
-//    func display() {
-//        print("*****************************")
-//        print("Customer Id : \(customerId)")
-//        print("Full Name : \(fullName)")
-//        if billDictionary != nil{
-//        for i in billDictionary.values
-//        {
-//            i.display()
-//        }
-//        }
-//        else {
-//            print("user has no bill")
-//        }
-//
-//    }
+
     func returnBillArray() -> Array<Bill>
     {
         var t : Array<Bill> = []
