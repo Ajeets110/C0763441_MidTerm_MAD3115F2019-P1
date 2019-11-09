@@ -34,6 +34,10 @@ class Customer{
         self.lastName = lastName
         self.email = email
     }
+    func addBill(Bill : Bill)
+    {
+        billDictionary.updateValue(Bill, forKey: Bill.billId)
+    }
     //  override
 //    func display() {
 //        print("*****************************")

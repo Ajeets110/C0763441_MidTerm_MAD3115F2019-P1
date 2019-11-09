@@ -37,13 +37,13 @@ class Singleton: NSObject {
     func alreadyCustomer() {
         // Customer 1
         let i1 = InternetBill(providerName : "Rogers", gbUsed : 500, billAmount : 56.50, billId : 1 , billDate : "Wednesday, 19 June, 2019", billType : Bill.bTypes.Internet)
-        let m1 = MobileBill(manufacturerName:"Galaxy", planName:"Prepaid Talk", phoneNumber:6464647484, internetUsed:5, minutesUsed:356, billAmount:250.0, billId : 2, billType : Bill.bTypes.Mobile, billDate: "Wednesday, 19 June, 2019")
+        let m1 = MobileBill(manufacturerName:"Galaxy", planName:"Prepaid Talk", internetUsed:5, minutesUsed:356, billAmount:250.0, billId : 2, billType : Bill.bTypes.Mobile, billDate: "Wednesday, 19 June, 2019")
         let h1 = HydroBill(billID : 3 , billDate : "Wednesday, 19 June, 2019", billType : Bill.bTypes.Hydro, agencyName : "Planet Energy", unitConsumed : 29 , billAmount : 54.35)
         let c1 = Customer(customerID: 1, firstName: "Ajeet", lastName: "Singh", email: "ajeets110@gmail.com", billDictionary: [i1.billId : i1, m1.billId : m1, h1.billId : h1])
         
         // Customer 2
         let i2 = InternetBill(providerName : "Fido", gbUsed : 600, billAmount : 70.00, billId : 4 , billDate : "Wednesday, 29 June, 2019", billType : Bill.bTypes.Internet)
-        let m2 = MobileBill(manufacturerName:"Apple", planName:"Prepaid Talk + Messages", phoneNumber:6476954211, internetUsed:6, minutesUsed:124, billAmount:80.00, billId : 5, billType : Bill.bTypes.Mobile, billDate: "Friday, 19 June, 2019")
+        let m2 = MobileBill(manufacturerName:"Apple", planName:"Prepaid Talk + Messages", internetUsed:6, minutesUsed:124, billAmount:80.00, billId : 5, billType : Bill.bTypes.Mobile, billDate: "Friday, 19 June, 2019")
         let c2 = Customer(customerID: 2, firstName: "Rakesh", lastName: "Kumar", email: "rakesh098@gmail.com", billDictionary: [i2.billId : i2, m2.billId : m2])
         let c3 = Customer(customerID: 3, firstName: "Jay-", lastName: "Z", email: "jayz666@gmail.com")
         

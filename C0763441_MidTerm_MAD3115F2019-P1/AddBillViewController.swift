@@ -27,14 +27,8 @@ class AddBillViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     @IBOutlet weak var txt3: UITextField!
     
     @IBOutlet weak var txt4: UITextField!
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
-    }
+    let myPickerData = [String](arrayLiteral: "Hydro", "Internet", "Mobile")
+
     
 
     override func viewDidLoad() {
@@ -60,12 +54,94 @@ class AddBillViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         else{
             if billType == "Mobile"
             {
-                    
+                txt1.isHidden = false
+                txt1.placeholder = "Manufacturer Name"
+                let manName = txt1.text!
+                
+                txt2.isHidden = false
+                txt2.placeholder = "Plan Name"
+                let planName = txt2.text
+                
+                txt3.isHidden = false
+                txt3.placeholder = "Minutes Used"
+                let minUsed = Int(txt3.text!)
+                
+                txt4.isHidden = false
+                txt4.placeholder = "Internet Used"
+                let IntUsed = Float(txt4.text!)
+                
+                if(planName != nil && manName != nil && IntUsed != nil && minUsed != nil){
+                    let m = MobileBill(manufacturerName: manName, planName: planName!, internetUsed: IntUsed!, minutesUsed: minUsed!, billAmount: billAmount!, billId: billId!, billType: Bill.bTypes(rawValue: billType)!, billDate: billDate)
+                
+                    c!.addBill(Bill: m)
+                     
+                     
+                 }else{
+                     let alert = UIAlertController(title: "Empty Field", message: "Please Fill all th details", preferredStyle: .alert)
+                     
+                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                     
+                     self.present(alert, animated: true)
+                 }
+                
             }
+            
         }
+        let alert = UIAlertController(title: "Bill Added", message: "Bill was Successfully Added.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+        navigationController?.popViewController(animated: true)
         }
         
+    @IBAction func billType(_ sender: Any) {
+        
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gstureRecognizer:)))
+        view.addGestureRecognizer(tapGesture)
+        bill_Type.inputView = picker
     }
+    
+        @objc func viewTapped(gstureRecognizer: UITapGestureRecognizer){
+            
+        view.endEditing(true)
+        let billTemp = bill_Type.text
+        if (billTemp?.elementsEqual("Mobile"))!
+        {
+            txt1.isHidden = false
+            txt2.isHidden = false
+            txt3.isHidden = false
+            txt4.isHidden = false
+            
+        }
+       
+            
+        }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+           return 1
+       }
+       
+       func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myPickerData.count
+       }
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+     return myPickerData[row]
+    }
+     
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
+        //view.addGestureRecognizer(tapGesture)
+        bill_Type.text = myPickerData[row]
+        
+        
+    }
+}
+    
     
     /*
     // MARK: - Navigation
@@ -77,4 +153,4 @@ class AddBillViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     }
     */
 
-}
+
